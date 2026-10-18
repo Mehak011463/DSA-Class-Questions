@@ -1,9 +1,8 @@
 class Solution {
     public boolean lemonadeChange(int[] bills) {
 
-
         int n = bills.length;
-        int five =0;
+        int five = 0;
         int ten = 0;
         for(int i=0;i<n;i++){
             int money = bills[i];
@@ -11,8 +10,10 @@ class Solution {
                 five++;
             }
             else if(money == 10){
-                if(five == 0){
+                if(five==0){
+
                     return false;
+
                 }
                 five--;
                 ten++;
@@ -29,13 +30,11 @@ class Solution {
                     if(five<3){
                         return false;
                     }
-                    five = five-3;
+                    five=five-3;
                 }
             }
         }
         return true;
-
-
         
     }
 }
