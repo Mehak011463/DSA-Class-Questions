@@ -10,8 +10,8 @@ class Solution {
                 if(st.isEmpty()){
                     return false;
                 }
-                int top = st.peek();
-                if(c==')' && top=='('){
+                char top = st.peek();
+                if(c==')' && top == '('){
                     st.pop();
                 }
                 else if(c=='}' && top=='{'){
@@ -23,7 +23,9 @@ class Solution {
                 else{
                     return false;
                 }
+
             }
+            
         }
         return st.isEmpty();
         
